@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alaram Clock</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <section class="Container">
+        <div class="time-display">
+            <img src="/files/clock.svg" class="timer">
+            <div id="clock"></div>
+        </div>
+        <form class="setAlarm">
+            <label class="alarm-heading"><h3>Set Alaram(24-Hour Clock)</h3></label>
+            <div class="set-alarm-field">
+                <input type="number" name="a_hour" placeholder="HH" max="23" min="00">
+                <input type="number" name="a_min" placeholder="MM" max="59" min="00">
+                <input type="number" name="a_sec" placeholder="SS" max="59" min="00">
+            </div>
+            <div class="controls">
+                <button type="submit" class="set-alarm">Set Alarm</button>
+                <button type="reset" onclick="clearAlarm()" class="clear-alarm">Stop Alarm</button>
+            </div>
+        </form>
+    </section>
+    <hr style="margin-top: 20px;">
+    <section>
+        <div>
+            <h3 class="alarm-heading" >Upcoming Alarms</h3>
+        </div>
+        <div>
+            <ul id="myList">
+
+            </ul>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
